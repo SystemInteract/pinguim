@@ -1,3 +1,10 @@
-import { Routes } from '@angular/router';
+import { MainComponent } from './main/main.component';
+import { Routes, RouterModule } from '@angular/router';
+import { ModuleWithProviders } from '@angular/compiler/src/core';
 
-export const ROUTES: Routes = [];
+const ROUTES: Routes = [
+  { path: 'mainForm', component: MainComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'mainForm' }
+];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(ROUTES);

@@ -1,4 +1,3 @@
-import { Option } from './header.model';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,8 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Input() option: Option;
-
   constructor() {}
 
   ngOnInit() {}

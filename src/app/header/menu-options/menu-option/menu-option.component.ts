@@ -1,4 +1,4 @@
-import { Option } from './../../header.model';
+import { Option } from './menu-option.model';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

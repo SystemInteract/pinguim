@@ -7,12 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuOptionsComponent implements OnInit {
   constructor() {}
+
   options: Option[] = [
-    { id: '1', text: 'Bradesco' },
-    { id: '2', text: 'Mercadopago' },
-    { id: '3', text: 'Sky' },
-    { id: '4', text: 'Creditis' },
-    { id: '5', text: 'Outros' }
+    {
+      text: 'Bradesco',
+      haveSubOption: true,
+      SubOptions: [{ text: 'CACS', path: 'mainForm' }]
+    },
+    {
+      text: 'Mercado Pago',
+      haveSubOption: false,
+      path: 'mainForm'
+    }
   ];
 
   ngOnInit() {}
