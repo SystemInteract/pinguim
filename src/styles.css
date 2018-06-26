@@ -4,3 +4,8 @@
   height: 55px;
   width: 55px;
 }
+
+input.ng-invalid.ng-dirty {
+  border-bottom-color: #e91e63 !important;
+  box-shadow: #e91e63 !important;
+}

@@ -1,5 +1,5 @@
+import { MenuSubOptions } from './../../../header.model';
 import { Component, OnInit, Input } from '@angular/core';
-import { SubOptions } from './../menu-option.model';
 
 @Component({
   selector: 'pin-menu-sub-option',
@@ -7,7 +7,7 @@ import { SubOptions } from './../menu-option.model';
   styleUrls: ['./menu-sub-option.component.scss']
 })
 export class MenuSubOptionComponent implements OnInit {
-  @Input() subOption: SubOptions;
+  @Input() subOption: MenuSubOptions;
 
   constructor() {}
 

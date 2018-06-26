@@ -1,15 +1,17 @@
 <!--Inicio de uma opção da navBar-->
-<li class="nav-item" *ngIf='!option.haveSubOption' routerLinkActive="active">
-  <a class="nav-link" [routerLink]='option.path'>{{option.text}}</a>
+<li class="nav-item" *ngIf='!menuOption.haveSubMenu' routerLinkActive="active">
+  <a class="nav-link" [routerLink]='menuOption.path'>{{menuOption.name}}</a>
 </li>
 
-<li class="nav-item dropdown" *ngIf='option.haveSubOption' routerLinkActive="active">
+
+<li class="nav-item dropdown" *ngIf='menuOption.haveSubMenu' routerLinkActive="active">
   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
     aria-expanded="false">
-    {{option.text}}
+    {{menuOption.name}}
   </a>
   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <pin-menu-sub-option [subOption]='subOpt' *ngFor="let subOpt of option.SubOptions"></pin-menu-sub-option>
+    <pin-menu-sub-option [subOption]='subOpt' *ngFor="let subOpt of menuOption.subOpt"></pin-menu-sub-option>
+
   </div>
 </li>
 <!--Fim de uma opção da navBar-->

@@ -1,11 +1,13 @@
-export interface Option {
-  text: string;
-  haveSubOption: boolean;
+export interface MenuOption {
+  id?: number;
+  name: string;
+  haveSubMenu: boolean;
   path?: string;
-  SubOption?: SubOption[];
+  subOpt?: MenuSubOptions[];
 }
 
-interface SubOption {
-  text: string;
+export interface MenuSubOptions {
+  id?: number;
+  name: string;
   path: string;
 }

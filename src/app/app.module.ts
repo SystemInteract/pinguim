@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { routing } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,6 +14,11 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { MenuSubOptionComponent } from './header/menu-options/menu-option/menu-sub-option/menu-sub-option.component';
 
+import { FormsModule } from '@angular/forms';
+import { MenuService } from './header/menu-options/menu-options.service';
+import { UserComponent } from './user/user.component';
+import { SignInComponent } from './user/sign-in/sign-in.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,15 +26,19 @@ import { MenuSubOptionComponent } from './header/menu-options/menu-option/menu-s
     MenuOptionsComponent,
     MenuOptionComponent,
     MainComponent,
-    MenuSubOptionComponent
+    MenuSubOptionComponent,
+    UserComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
     MDBBootstrapModule.forRoot(),
-    routing
+    routing,
+    HttpModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

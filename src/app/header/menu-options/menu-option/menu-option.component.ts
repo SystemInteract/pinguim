@@ -1,4 +1,4 @@
-import { Option } from './menu-option.model';
+import { MenuOption } from './../../header.model';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './menu-option.component.html'
 })
 export class MenuOptionComponent implements OnInit {
-  @Input() option: Option;
+  @Input() menuOption: MenuOption;
 
   constructor() {}
 
